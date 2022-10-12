@@ -73,7 +73,7 @@ public class Examples {
         printStringsStartingWith("x", "f", false);
     }
 
-    public static void example2() throws InterruptedException {
+    public static void example2() {
         System.out.println("################## EXAMPLE 2 ##################");
         final var numAttempts = 1000;
 
@@ -121,15 +121,11 @@ public class Examples {
     }
 
     public static void main(String[] args) {
-        try {
-            final var example = args[0];
-            if ("1".equals(example)) {
-                example1();
-            } else if ("2".equals(example)) {
-                example2();
-            }
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        final var example = args[0];
+        if ("1".equals(example)) {
+            example1();
+        } else if ("2".equals(example)) {
+            example2();
         }
     }
 }
